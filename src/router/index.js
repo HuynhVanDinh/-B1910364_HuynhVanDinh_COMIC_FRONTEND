@@ -11,6 +11,12 @@ const routes = [
     name: "notfound",
     component: () => import("@/views/NotFound.vue"),
   },
+  {
+    path: "/comics/:id",
+    name: "comic.edit",
+    component: () => import("@/views/ComicEdit.vue"),
+    props: true, // Truyền các biến trong $route.params vào làm props
+  },
 ];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
